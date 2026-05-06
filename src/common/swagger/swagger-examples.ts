@@ -1,0 +1,107 @@
+export const swaggerExamples = {
+  adminLogin: {
+    email: 'admin@flower-store.local',
+    password: 'admin123',
+  },
+  adminUserQuery: {
+    page: 1,
+    limit: 10,
+    keyword: 'manager',
+    isActive: true,
+  },
+  createAdminUser: {
+    email: 'manager@flower-store.local',
+    password: 'manager123',
+    name: 'Flower Store Manager',
+    roles: ['manager'],
+    isActive: true,
+  },
+  updateAdminUser: {
+    email: 'senior.manager@flower-store.local',
+    name: 'Flower Store Senior Manager',
+    password: 'manager456',
+    roles: ['manager', 'inventory'],
+    isActive: true,
+  },
+  createCategory: {
+    name: 'Hoa khai trương',
+    slug: 'hoa-khai-truong',
+    description: 'Các mẫu lẵng hoa chúc mừng khai trương sang trọng.',
+    isActive: true,
+  },
+  createProduct: {
+    categoryId: 1,
+    name: 'Bó mẫu đơn Peony Charm',
+    slug: 'bo-mau-don-peony-charm',
+    description: 'Mẫu đơn nhập khẩu phối lá bạc, phù hợp quà tặng cao cấp.',
+    images: ['/images/bo-mau-don-peony-charm.jpg'],
+    basePrice: 780000,
+    colors: ['hồng', 'trắng'],
+    types: ['bó hoa', 'hộp hoa'],
+    tags: ['premium', 'peony', 'gift'],
+    isActive: true,
+    variants: [
+      {
+        type: 'bó hoa',
+        color: 'hồng',
+        sku: 'PEO-BO-HONG',
+        price: 780000,
+        stock: 9,
+      },
+      {
+        type: 'hộp hoa',
+        color: 'trắng',
+        sku: 'PEO-HOP-TRANG',
+        price: 850000,
+        stock: 5,
+      },
+    ],
+  },
+  updateProduct: {
+    name: 'Bó mẫu đơn Peony Charm Deluxe',
+    basePrice: 820000,
+    colors: ['hồng', 'trắng', 'kem'],
+    variants: [
+      {
+        type: 'bó hoa',
+        color: 'hồng',
+        sku: 'PEO-BO-HONG',
+        price: 820000,
+        stock: 12,
+      },
+    ],
+  },
+  updateStock: {
+    productId: 1,
+    variantId: 1,
+    stock: 25,
+  },
+  createOrder: {
+    customerName: 'Nguyễn Mai Anh',
+    phone: '+84901234567',
+    address: '12 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh',
+    note: 'Giao trong giờ hành chính, gọi trước 15 phút.',
+    items: [
+      {
+        productId: 1,
+        variantId: 1,
+        quantity: 2,
+      },
+      {
+        productId: 2,
+        variantId: 5,
+        quantity: 1,
+      },
+    ],
+  },
+  productQuery: {
+    page: 1,
+    limit: 10,
+    categoryId: 1,
+    type: 'bó hoa',
+    color: 'hồng',
+    minPrice: 300000,
+    maxPrice: 900000,
+    keyword: 'hồng',
+  },
+};
